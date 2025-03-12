@@ -10,10 +10,13 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         Vector2 input = Vector2.zero;
+        
         if (Input.GetKeyDown(KeyCode.P))
         {
             OnSettingsMenu?.Invoke();
         }
+
+        if (GameManager.Instance.IsSettingsMenuActive) return;
 
         if (Input.GetKey(KeyCode.W))
         {
