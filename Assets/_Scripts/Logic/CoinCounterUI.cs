@@ -12,4 +12,15 @@ public class CoinCounterUI : MonoBehaviour
     
     private float containerInitPosition;
     private float moveAmount;
+
+    private void Start() 
+    {
+        Canvas.ForceUpdateCanvases();
+        current.SetText("0");
+        toUpdate.SetText("0");
+
+        containerInitPosition = coinTextContainer.localPosition.y;
+
+        moveAmount = current.rectTransform.rect.height;
+    }
 }
