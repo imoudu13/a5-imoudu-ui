@@ -44,7 +44,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         }
 
         coinCounter.UpdateScore(score);
-        scoreText.text = $"Score: {score}";
+        // scoreText.text = $"Score: {score}";
     }
 
     public void QuitGame()
